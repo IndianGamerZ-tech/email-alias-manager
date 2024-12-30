@@ -1,0 +1,12 @@
+email-alias-manager/
+├── README.md
+├── src/
+│   ├── main.py                # Main script for backend logic
+│   ├── utils.py               # Helper functions
+│   └── templates/
+│       ├── index.html         # Basic frontend for user interface
+│       └── alias_manager.css  # Styling for the UI
+├── tests/
+│   └── test_main.py           # Basic tests for functionality
+├── requirements.txt           # Dependencies (if using Python)
+└── LICENSE                    # Open-source license
