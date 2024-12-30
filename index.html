@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Alias Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Alias Manager</h1>
+    <div class="form-container">
+        <form action="/add" method="post">
+            <input type="text" name="alias" placeholder="Alias" required>
+            <input type="text" name="description" placeholder="Description" required>
+            <button type="submit">Add Alias</button>
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>Alias</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        {% for alias in aliases %}
+        <tr>
+            <td>{{ alias[1] }}</td>
+            <td>{{ alias[2] }}</td>
+            <td>
+                <a href="/delete/{{ alias[0] }}"><button>Delete</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
