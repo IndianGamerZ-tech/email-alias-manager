@@ -12,9 +12,13 @@ This tool helps freelancers manage multiple email aliases efficiently. Features 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/email-alias-manager.git
+
 2.Navigate to the project directory: cd email-alias-manager
+
 3.Install some dependencies :pip install -r requirements.txt
+
 4.Run the application : python src/main.py
+
 5.Access the project interface at http://localhost:5000
 
 
