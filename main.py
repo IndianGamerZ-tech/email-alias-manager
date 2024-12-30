@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 
-app = Flask(__name__)
+app = Flask(Flutter)
 
 def init_db():
     # Initialize the database and create table if not exists
